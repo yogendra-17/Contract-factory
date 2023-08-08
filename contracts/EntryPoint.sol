@@ -8,11 +8,11 @@ pragma solidity ^0.8.12;
 /* solhint-disable avoid-low-level-calls */
 /* solhint-disable no-inline-assembly */
 
-import "../interfaces/IAccount.sol";
-import "../interfaces/IPaymaster.sol";
-import "../interfaces/IEntryPoint.sol";
+import "./IAccount.sol";
+import "./IPaymaster.sol";
+import "./IEntryPoint.sol";
 
-import "../utils/Exec.sol";
+import "./Exec.sol";
 import "./StakeManager.sol";
 import "./SenderCreator.sol";
 import "./Helpers.sol";

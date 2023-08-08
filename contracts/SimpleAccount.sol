@@ -10,7 +10,7 @@ import "@openzeppelin/contracts/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
 import "./BaseAccount.sol";
-import "./samples/callback/TokenCallbackHandler.sol";
+import "./TokenCallbackHandler.sol";
 
 /**
   * minimal account.

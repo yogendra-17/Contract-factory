@@ -8,7 +8,8 @@ import "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol";
 import "./SimpleAccount.sol";
 
 
-contract CounterFactory {
+contract CounterFactory 
+{
     Counter[] public deployedCounters;
 
     address public immutable implementation;
@@ -28,6 +29,7 @@ contract CounterFactory {
         emit CounterDeployed(address(counter));
     }
 }
+
 contract SimpleAccountFactory {
     SimpleAccount public immutable accountImplementation;
 
