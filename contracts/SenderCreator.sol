@@ -24,5 +24,6 @@ contract SenderCreator {
         if (!success) {
             sender = address(0);
         }
+        return sender;
     }
 }
