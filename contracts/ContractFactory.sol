@@ -15,18 +15,18 @@ contract CounterFactory
     address public immutable implementation;
 
     constructor() {
-      implementation = address(new Counter());
+      implementation = address(new Counter()); 
     }
 
-    event CounterDeployed(address _counterAddress);
+    event CounterDepps(address _counterAddress);
 
-    function deployCounter(uint256 _initialCounter) public {
+    function depCount(uint256 _initialCounter) public {
         address payable clone = payable(Clones.clone(implementation));
         Counter counter = Counter(clone);
         counter.initialize(_initialCounter);
 
         deployedCounters.push(counter);
-        emit CounterDeployed(address(counter));
+        emit CounterDepps(address(counter));
     }
 }
 
@@ -43,6 +43,7 @@ contract SimpleAccountFactory {
      * Note that during UserOperation execution, this method is called only if the account is not deployed.
      * This method returns an existing account address so that entryPoint.getSenderAddress() would work even after account creation
      */
+    event SimpleAccountCreated(address _address);
     function createAccount(address owner,uint256 salt) public returns (SimpleAccount ret) {
         address addr = getAddress(owner, salt);
         uint codeSize = addr.code.length;
